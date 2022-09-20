@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取信息" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加联系人" />
+
+    <Button
+        android:id="@+id/push_info_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发起消息推送" />
+
+    <Button
+        android:id="@+id/mac_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取本机的Mac地址" />
+
+    <Button
+        android:id="@+id/wlan_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取WLAN_Mac地址" />
+
+    <Button
+        android:id="@+id/geo_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取地理位置" />
+    <Button
+        android:id="@+id/camera_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="相机操作" />
+    <Button
+        android:id="@+id/audio_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="音频操作" />
+    <Button
+        android:id="@+id/screen_shot_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="截屏操作" />
+</LinearLayout>

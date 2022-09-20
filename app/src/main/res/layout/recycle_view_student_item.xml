@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.ttit.jetpack.room.Student"></import>
+
+        <variable
+            name="student"
+            type="Student" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:paddingVertical="20dip">
+
+        <TextView
+            android:id="@+id/studentId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(student.id)}"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ID"></TextView>
+
+        <TextView
+            android:id="@+id/studentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{student.name}"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/studentId"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="姓名"></TextView>
+
+        <TextView
+            android:id="@+id/studentAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(student.age)}"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/studentName"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="年龄"></TextView>
+
+
+        <!--<androidx.constraintlayout.widget.Guideline-->
+        <!--    android:id="@+id/guidelineX"-->
+        <!--    android:layout_width="wrap_content"-->
+        <!--    android:layout_height="wrap_content"-->
+        <!--    android:orientation="vertical"-->
+        <!--    app:layout_constraintGuide_begin="206dp">-->
+        <!--</androidx.constraintlayout.widget.Guideline>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
