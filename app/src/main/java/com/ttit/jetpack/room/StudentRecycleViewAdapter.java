@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ttit.helloworld.R;
 import com.ttit.helloworld.databinding.RecycleViewStudentItemBinding;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StudentRecycleViewAdapter extends RecyclerView.Adapter<StudentRecycleViewAdapter.MyViewHolder> {
@@ -27,7 +28,11 @@ public class StudentRecycleViewAdapter extends RecyclerView.Adapter<StudentRecyc
     Integer recycleViewItem = R.layout.recycle_view_student_item;
 
     public StudentRecycleViewAdapter(List<Student> studentList) {
-        this.studentList = studentList;
+        if (studentList == null) {
+            this.studentList = new ArrayList<>();
+        } else {
+            this.studentList = studentList;
+        }
     }
 
 

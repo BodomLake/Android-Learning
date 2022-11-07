@@ -19,6 +19,12 @@ public class Student {
     @ColumnInfo(name = "age", typeAffinity = ColumnInfo.INTEGER)
     public Integer age;
 
+    @ColumnInfo(name = "gender", typeAffinity = ColumnInfo.INTEGER)
+    public int gender;
+
+    // @ColumnInfo(name = "score", typeAffinity = ColumnInfo.INTEGER)
+    // public int score;
+
     @Ignore
     public boolean flag;
 

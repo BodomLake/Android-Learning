@@ -12,6 +12,7 @@ public class StudentViewModel extends AndroidViewModel {
 
     private StudentRepository studentRepository;
 
+    // 在构造的时候，绑定了整个应用的上下文
     public StudentViewModel(@NonNull Application application) {
         super(application);
         this.studentRepository = new StudentRepository(application);
@@ -31,5 +32,9 @@ public class StudentViewModel extends AndroidViewModel {
 
     public LiveData<List<Student>> getAllStudentLiveData() {
         return studentRepository.getAllStudentsLive();
+    }
+
+    public void updateStudent(Student student){
+        studentRepository.mUpdate(student);
     }
 }

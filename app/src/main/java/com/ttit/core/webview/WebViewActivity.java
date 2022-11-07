@@ -1,6 +1,7 @@
 package com.ttit.core.webview;
 
 import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
@@ -44,6 +45,10 @@ public class WebViewActivity extends AppCompatActivity {
                 return true;
             }
         });
+        // 开启调试模式
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
         WebSettings settings = webView.getSettings();
         settings.setUseWideViewPort(true);  //设定支持viewport
         settings.setLoadWithOverviewMode(true);  //自适应屏幕

@@ -1,13 +1,10 @@
 package com.ttit.jetpack.room;
 
-import android.app.Application;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.view.View;
 
 import androidx.lifecycle.LiveData;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class StudentRepository {

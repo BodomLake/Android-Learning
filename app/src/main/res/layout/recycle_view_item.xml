@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <import type="com.ttit.jetpack.recycleview.Idol"></import>
-
         <variable
             name="idol"
             type="Idol" />
@@ -20,14 +18,14 @@
         <ImageView
             android:id="@+id/idolImage"
             android:layout_width="200dip"
-            android:layout_height="match_parent"
+            android:layout_height="200dip"
             app:image="@{idol.image}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/guidelineX"
-            app:layout_constraintHorizontal_bias="0.432"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.054"
+            app:layout_constraintVertical_bias="0"
             tools:srcCompat="@tools:sample/avatars"></ImageView>
 
         <TextView
@@ -56,7 +54,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5"></androidx.constraintlayout.widget.Guideline>
+            app:layout_constraintGuide_percent="0.5">
+        </androidx.constraintlayout.widget.Guideline>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

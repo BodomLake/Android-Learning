@@ -9,7 +9,6 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ttit.helloworld.R;
-import com.ttit.helloworld.databinding.ActivityRecycleViewBinding;
 import com.ttit.helloworld.databinding.RecycleViewItemBinding;
 
 import java.util.List;

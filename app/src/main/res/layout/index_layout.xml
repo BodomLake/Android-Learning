@@ -31,7 +31,7 @@
                 android:layout_height="match_parent"
                 android:background="@null"
                 android:paddingLeft="40dp"
-                android:text="大傻叉"
+                android:text="你猜我猜不猜"
                 android:textColor="#000000" />
         </RelativeLayout>
 

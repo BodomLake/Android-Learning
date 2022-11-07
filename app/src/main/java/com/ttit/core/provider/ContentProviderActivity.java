@@ -1,6 +1,7 @@
 package com.ttit.core.provider;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -17,6 +18,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.util.Log;
@@ -24,10 +26,12 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
+import androidx.navigation.NavDeepLinkBuilder;
 
 import com.ttit.core.webview.WebViewActivity;
 import com.ttit.helloworld.R;
@@ -184,16 +188,20 @@ public class ContentProviderActivity extends AppCompatActivity {
 
         // 获取系统服务（消息推送管理器）
         NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
+/*        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O) {
+            manager = getSystemService(NotificationManager.class);
+        }*/
         Intent intent = new Intent(this, WebViewActivity.class);
         //  flags: FLAG_ONE_SHOT, FLAG_NO_CREATE, FLAG_CANCEL_CURRENT, FLAG_UPDATE_CURRENT
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
-
+        // @SuppressLint("ResourceType")
+        // PendingIntent pendingIntent2 = new NavDeepLinkBuilder(getApplicationContext()).setGraph(R.id.nav_graph).setDestination(R.id.FirstFragment).createPendingIntent();
         String channelId = UUID.randomUUID().toString();
         // 设置通知，为了更好的兼容性，可以调用support-v4的NotificationCompat来设置
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), channelId)
                 .setContentTitle("PendingIntent-Title")
                 .setContentIntent(pendingIntent)
+                .setPriority(Notification.PRIORITY_DEFAULT)
                 .setContentText("点击跳转到WebView页面")
                 .setWhen(System.currentTimeMillis())
                 //设置闪烁灯：3个参数：颜色，灯亮时长，灯暗时长
@@ -203,7 +211,7 @@ public class ContentProviderActivity extends AppCompatActivity {
                 .setVibrate(new long[]{200, 1000, 1000, 1000});
 
         // builder.setAutoCancel(true);
-        // NotificationChannel是Android O新增的通知渠道，其允许您为要显示的每种通知类型创建用户可自定义的渠道
+        // NotificationChannel是Android Oreo新增的通知渠道，其允许您为要显示的每种通知类型创建用户可自定义的渠道
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(channelId, "my_random_uuid_channel", NotificationManager.IMPORTANCE_DEFAULT);
             channel.enableLights(true);
@@ -292,6 +300,7 @@ public class ContentProviderActivity extends AppCompatActivity {
     // requestPermissions 完成之后的回调
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         Log.e("ttit", String.valueOf(requestCode));
         boolean flag = (grantResults.length > 0) && (grantResults[0] == PackageManager.PERMISSION_GRANTED);
         switch (requestCode) {
