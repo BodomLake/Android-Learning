@@ -26,11 +26,13 @@ public class NewsAdapter2 extends BaseAdapter {
         this.mContext = mContext;
     }
 
+    // 获取item的长度
     @Override
     public int getCount() {
         return mData.size();
     }
 
+    // 获取对应的数据
     @Override
     public Object getItem(int position) {
         return mData.get(position);
@@ -41,7 +43,7 @@ public class NewsAdapter2 extends BaseAdapter {
         return position;
     }
 
-    //返回对应item布局类型
+    // 返回对应item布局类型
     @Override
     public int getItemViewType(int position) {
         if (position % 2 == 0) {
@@ -51,7 +53,7 @@ public class NewsAdapter2 extends BaseAdapter {
         }
     }
 
-    //总共多少item布局类型
+    // 总共多少item布局类型
     @Override
     public int getViewTypeCount() {
         return 2;

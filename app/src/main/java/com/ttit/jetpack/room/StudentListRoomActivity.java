@@ -52,11 +52,13 @@ public class StudentListRoomActivity extends AppCompatActivity {
         // vmp作为 viewmodel的工厂，根据 class文件 生产（构造、实例化）出了 stuVM这一类的对象
         stuVM = vmp.get(StudentViewModel.class);
 
-        // 对 getAllStudentLiveData() 返回的 LiveData 添加观察者，一旦发现被执行，就发起回调
+        // 对 getAllStudentLiveData() 返回的 LiveData<T>类型数据 添加观察者，一旦发现被执行，就发起回调
         stuVM.getAllStudentLiveData().observe(this, new Observer<List<Student>>() {
             @Override
             public void onChanged(List<Student> students) {
+                // 影响适配器
                 studentRecycleViewAdapter.setStudentList(students);
+                // 提醒对应的item做出视图更新
                 studentRecycleViewAdapter.notifyDataSetChanged();
             }
         });

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.ttit.jetpack.recycleview.Idol"></import>
+        <import type="com.ttit.jetpack.recyclerview.Idol"></import>
         <variable
             name="idol"
             type="Idol" />

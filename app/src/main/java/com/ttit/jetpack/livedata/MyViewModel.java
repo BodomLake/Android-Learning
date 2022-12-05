@@ -18,9 +18,11 @@ public class MyViewModel extends ViewModel {
         }
         return currentSecond;
     }
+
     public void setCurrentSecond(Integer sec) {
         this.currentSecond.setValue(sec);
     }
+
     protected void onCleared() {
         Log.e("ttit", "MyViewModel:已经被清除");
     }
