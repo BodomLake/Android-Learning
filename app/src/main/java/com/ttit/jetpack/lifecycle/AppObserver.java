@@ -7,7 +7,7 @@ import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 
 public class AppObserver implements LifecycleObserver {
-    private final String Tag = "ttit";
+    private final String Tag = "bodomlake";
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     public void ON_CREATE() {

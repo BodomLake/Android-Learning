@@ -19,7 +19,7 @@ public class MyWork extends Worker {
     @Override
     public Result doWork() {
         SystemClock.sleep(2000);
-        Log.e("ttit", "do Work!");
+        Log.e("bodomlake", "do Work!");
         Data inputData = getInputData();
         Data outputData = new Data.Builder()
                 .putAll(inputData)

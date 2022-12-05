@@ -29,9 +29,9 @@ public class SecondFragment extends Fragment {
         System.out.println(args.getString("string-args"));
         System.out.println(args.getInt("int-args"));
         System.out.println(args.getInt("age"));
-        Log.e("ttit", args.getString("string-args"));
-        Log.e("ttit", String.valueOf(args.getInt("int-args")));
-        Log.e("ttit", String.valueOf(args.getInt("age")));
+        Log.e("bodomlake", args.getString("string-args"));
+        Log.e("bodomlake", String.valueOf(args.getInt("int-args")));
+        Log.e("bodomlake", String.valueOf(args.getInt("age")));
 
         view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
             @Override

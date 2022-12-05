@@ -16,13 +16,13 @@ public class DispatchActivity extends AppCompatActivity {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.e("ttit", "DispatchActivity ://////dispatchTouchEvent");
+        Log.e("bodomlake", "DispatchActivity ://////dispatchTouchEvent");
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.e("ttit", "DispatchActivity ://////onTouchEvent event ="+event.getAction());
+        Log.e("bodomlake", "DispatchActivity ://////onTouchEvent event ="+event.getAction());
         return true;
     }
 }

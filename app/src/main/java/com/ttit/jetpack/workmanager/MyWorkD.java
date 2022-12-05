@@ -15,7 +15,7 @@ public class MyWorkD extends Worker {
     @NonNull
     @Override
     public Result doWork() {
-        Log.e("ttit", this.getClass().getSimpleName() + " doing Work");
+        Log.e("bodomlake", this.getClass().getSimpleName() + " doing Work");
         return Result.success();
     }
 }

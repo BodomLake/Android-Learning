@@ -18,7 +18,7 @@ public class MyFragment2 extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.myfragment2_layout, container, false);
         String name = (String) getArguments().get("name");
-        Log.e("ttit", "name = " + name);
+        Log.e("bodomlake", "name = " + name);
         return view;
     }
 

@@ -24,7 +24,7 @@ public class SharedPreferencesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String etStr = et.getText().toString().trim();
-                SharedPreferences shp = getSharedPreferences("ttit", MODE_PRIVATE);
+                SharedPreferences shp = getSharedPreferences("bodomlake", MODE_PRIVATE);
                 SharedPreferences.Editor editor = shp.edit();
                 editor.putString("name", etStr);
                 boolean isSaveSuccess = editor.commit();
@@ -36,7 +36,7 @@ public class SharedPreferencesActivity extends AppCompatActivity {
         findViewById(R.id.read).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences shp = getSharedPreferences("ttit", MODE_PRIVATE);
+                SharedPreferences shp = getSharedPreferences("bodomlake", MODE_PRIVATE);
                 String s = shp.getString("name", "无");
                 tv.setText(s);
             }

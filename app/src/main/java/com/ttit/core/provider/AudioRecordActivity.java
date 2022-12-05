@@ -37,7 +37,7 @@ public class AudioRecordActivity extends AppCompatActivity implements View.OnCli
 
         //从6.0系统开始,需要动态获取权限
         int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO);
-        // 试图拿到 联系人 读取权限
+        // 试图拿到 音频读取器  使用权限
         if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 0);
         }
@@ -57,7 +57,7 @@ public class AudioRecordActivity extends AppCompatActivity implements View.OnCli
                     mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.DEFAULT);
                     // 创建一个临时的音频输出文件
                     audioFile = File.createTempFile("record_", ".amr");
-                    Log.e("ttit", audioFile.getName());
+                    Log.e("bodomlake", audioFile.getName());
                     mediaRecorder.setOutputFile(audioFile.getAbsolutePath());
                     mediaRecorder.prepare();
                     mediaRecorder.start();
@@ -96,7 +96,7 @@ public class AudioRecordActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        Log.e("ttit", String.valueOf(requestCode));
+        Log.e("bodomlake", String.valueOf(requestCode));
         boolean flag = (grantResults.length > 0) && (grantResults[0] == PackageManager.PERMISSION_GRANTED);
         switch (requestCode) {
             case 0:

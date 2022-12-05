@@ -19,19 +19,19 @@ public class MLinearLayout extends LinearLayout {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.e("ttit", "MLinearLayout ://////onTouchEvent event ="+event.getAction());
+        Log.e("bodomlake", "MLinearLayout ://////onTouchEvent event ="+event.getAction());
         return false;
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Log.e("ttit", "MLinearLayout ://////onInterceptTouchEvent");
+        Log.e("bodomlake", "MLinearLayout ://////onInterceptTouchEvent");
         return true;
     }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.e("ttit", "MLinearLayout ://////dispatchTouchEvent");
+        Log.e("bodomlake", "MLinearLayout ://////dispatchTouchEvent");
 //        return super.dispatchTouchEvent(ev);
         return true;
     }

@@ -24,6 +24,6 @@ public class MyViewModel extends ViewModel {
     }
 
     protected void onCleared() {
-        Log.e("ttit", "MyViewModel:已经被清除");
+        Log.e("bodomlake", "MyViewModel:已经被清除");
     }
 }

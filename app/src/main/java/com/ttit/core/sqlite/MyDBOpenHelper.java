@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class MyDBOpenHelper extends SQLiteOpenHelper {
-    private static final String TAG = "ttit";
+    private static final String TAG = "bodomlake";
 
     public MyDBOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory,
                            int version) {
@@ -25,6 +25,6 @@ public class MyDBOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.e(TAG, "MyDBOpenHelper: 执行了onUpgrade");
-        db.execSQL("ALTER TABLE person ADD phone VARCHAR(12) NULL");
+        db.execSQL("ALTER TABLE person ADD phone VARCHAR(12) NOT NULL");
     }
 }

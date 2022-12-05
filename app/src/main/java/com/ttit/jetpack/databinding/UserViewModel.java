@@ -25,7 +25,7 @@ public class UserViewModel extends BaseObservable {
     public void setUserName(String userName) {
         if (!TextUtils.equals(userName, user.getName())) {
             this.user.setName(userName);
-            Log.e("ttit", "set UserName:" + userName);
+            Log.e("bodomlake", "set UserName:" + userName);
             notifyPropertyChanged(BR.userName);
         }
     }

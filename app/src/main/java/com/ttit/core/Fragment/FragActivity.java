@@ -25,7 +25,7 @@ public class FragActivity extends AppCompatActivity {
         myFragment.setCallBack(new MyFragment2.CallBack() {
             @Override
             public void getResult(String result) {
-                Log.e("ttit", "result = " + result);
+                Log.e("bodomlake", "result = " + result);
             }
         });
 

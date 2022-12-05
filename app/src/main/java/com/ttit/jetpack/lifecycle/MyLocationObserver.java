@@ -47,14 +47,14 @@ public class MyLocationObserver implements LifecycleObserver {
     // 响应 destroy生命周期
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     private void stopGetLocation() {
-        Log.e("ttit", "stopGetLocation");
+        Log.e("bodomlake", "stopGetLocation");
         locationManager.removeUpdates(listener);
     }
 
     static class MyLocationListener implements LocationListener {
         @Override
         public void onLocationChanged(Location location) {
-            Log.e("ttit", "onLocationChanged" + location.toString());
+            Log.e("bodomlake", "onLocationChanged" + location.toString());
         }
 
         @Override

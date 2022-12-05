@@ -68,14 +68,14 @@ public class OkhttpActivity extends AppCompatActivity {
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.i("ttit", e.getMessage());
+                Log.i("bodomlake", e.getMessage());
             }
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 //得到的子线程
                 final String result = response.body().string();
-                Log.e("ttit", result);
+                Log.e("bodomlake", result);
                 // tvRes.setText(result);
                 // final Context context = getApplicationContext();
                 mHandler.post(new Runnable() {
@@ -126,7 +126,7 @@ public class OkhttpActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String result = response.body().string();
-                Log.e("ttit", result);
+                Log.e("bodomlake", result);
                 tvRes.setText(result);
             }
         });

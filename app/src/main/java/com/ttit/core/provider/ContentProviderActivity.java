@@ -130,9 +130,9 @@ public class ContentProviderActivity extends AppCompatActivity {
             //获取联系人姓名,手机号码
             String cName = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
             String cNum = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-            Log.e("ttit", "姓名:" + cName);
-            Log.e("ttit", "号码:" + cNum);
-            Log.e("ttit", "======================");
+            Log.e("bodomlake", "姓名:" + cName);
+            Log.e("bodomlake", "号码:" + cNum);
+            Log.e("bodomlake", "======================");
         }
         cursor.close();
     }
@@ -179,12 +179,12 @@ public class ContentProviderActivity extends AppCompatActivity {
             resolver.applyBatch("com.android.contacts", operations);
             Toast.makeText(getApplicationContext(), "添加成功", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
-            Log.e("ttit", e.getMessage());
+            Log.e("bodomlake", e.getMessage());
         }
     }
 
     private void pushInfo() {
-        Log.e("ttit", "pushInfo");
+        Log.e("bodomlake", "pushInfo");
 
         // 获取系统服务（消息推送管理器）
         NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -250,7 +250,7 @@ public class ContentProviderActivity extends AppCompatActivity {
             if (stringMac.endsWith(":")) {
                 stringMac = stringMac.substring(0, stringMac.lastIndexOf(":"));
             }
-            Log.e("ttit", stringMac);
+            Log.e("bodomlake", stringMac);
             Toast.makeText(getApplicationContext(), stringMac, Toast.LENGTH_LONG).show();
             return stringMac;
         } catch (SocketException e) {
@@ -301,7 +301,7 @@ public class ContentProviderActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        Log.e("ttit", String.valueOf(requestCode));
+        Log.e("bodomlake", String.valueOf(requestCode));
         boolean flag = (grantResults.length > 0) && (grantResults[0] == PackageManager.PERMISSION_GRANTED);
         switch (requestCode) {
             case 0:

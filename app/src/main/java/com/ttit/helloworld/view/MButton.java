@@ -4,9 +4,10 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.widget.Button;
+import androidx.appcompat.widget.AppCompatButton;
 
-public class MButton extends Button {
+
+public class MButton extends AppCompatButton {
     public MButton(Context context) {
         super(context);
     }
@@ -21,14 +22,14 @@ public class MButton extends Button {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.e("ttit", "MButton ://////onTouchEvent event ="+event.getAction());
+        Log.e("bodomlake", "MButton ://////onTouchEvent event ="+event.getAction());
 //        return super.onTouchEvent(event);
         return false;
     }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        Log.e("ttit", "MButton ://////dispatchTouchEvent");
+        Log.e("bodomlake", "MButton ://////dispatchTouchEvent");
         return super.dispatchTouchEvent(event);
     }
 }

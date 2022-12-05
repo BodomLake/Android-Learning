@@ -15,7 +15,7 @@ public class FirstActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.e("ttit", "执行生命周期函数:=== FirstActivity onCreate() ===");
+        Log.e("bodomlake", "执行生命周期函数:=== FirstActivity onCreate() ===");
         setContentView(R.layout.first_activity_layout);
         Button btn = findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -36,12 +36,12 @@ public class FirstActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent in = new Intent(FirstActivity.this, ThirdActivity.class);
                 //1.传单个数据
-//                in.putExtra("test","TTIT");
+//                in.putExtra("test","bodomlake");
 //                in.putExtra("number",100);
                 //2.传多个数据
                 Bundle b = new Bundle();
                 b.putInt("number", 100);
-                b.putString("test", "TTIT");
+                b.putString("test", "bodomlake");
                 in.putExtras(b);
                 startActivity(in);
 
@@ -62,36 +62,36 @@ public class FirstActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.e("ttit", "执行生命周期函数:=== FirstActivity onStart() ===");
+        Log.e("bodomlake", "执行生命周期函数:=== FirstActivity onStart() ===");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.e("ttit", "执行生命周期函数:=== FirstActivity onResume() ===");
+        Log.e("bodomlake", "执行生命周期函数:=== FirstActivity onResume() ===");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.e("ttit", "执行生命周期函数:=== FirstActivity onPause() ===");
+        Log.e("bodomlake", "执行生命周期函数:=== FirstActivity onPause() ===");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.e("ttit", "执行生命周期函数:=== FirstActivity onStop() ===");
+        Log.e("bodomlake", "执行生命周期函数:=== FirstActivity onStop() ===");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.e("ttit", "执行生命周期函数:=== FirstActivity onRestart() ===");
+        Log.e("bodomlake", "执行生命周期函数:=== FirstActivity onRestart() ===");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.e("ttit", "执行生命周期函数:=== FirstActivity onDestroy() ===");
+        Log.e("bodomlake", "执行生命周期函数:=== FirstActivity onDestroy() ===");
     }
 }

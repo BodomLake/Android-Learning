@@ -87,7 +87,7 @@ public class WorkManagerActivity extends AppCompatActivity {
         workManager.getWorkInfoByIdLiveData(workRequest.getId()).observe(this, new Observer<WorkInfo>() {
             @Override
             public void onChanged(WorkInfo workInfo) {
-                Log.e("ttit", workInfo.getId().toString());
+                Log.e("bodomlake", workInfo.getId().toString());
                 // workInfo.getId();
                 // 对应 doWork的 return Result.success();
                 if (workInfo != null && workInfo.getState() == WorkInfo.State.SUCCEEDED) {
