@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.ttit.jetpack.recyclerview.RecyclerViewActivity">
+        tools:context="com.bodomlake.jetpack.recyclerview.RecyclerViewActivity">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycleView"

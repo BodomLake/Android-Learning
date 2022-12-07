@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#71C2F4"
-    tools:context=".MainActivity">
+    tools:context="com.bodomlake.helloworld.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"

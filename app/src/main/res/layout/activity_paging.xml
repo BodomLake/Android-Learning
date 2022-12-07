@@ -6,13 +6,13 @@
     <data>
         <variable
             name="movieList"
-            type="com.ttit.jetpack.paging.model.Movies" />
+            type="com.bodomlake.jetpack.paging.model.Movies" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.ttit.jetpack.paging.PagingActivity">
+        tools:context="com.bodomlake.jetpack.paging.PagingActivity">
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipeRefreshLayout"

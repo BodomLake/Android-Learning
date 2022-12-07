@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/myfragment"
-        android:name="com.ttit.core.Fragment.MyFragment"
+        android:name="com.bodomlake.core.Fragment.MyFragment"
         android:layout_width="match_parent"
         android:layout_height="300dp" />
 

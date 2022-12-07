@@ -11,7 +11,7 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
     defaultConfig {
-        applicationId "com.ttit.helloworld"
+        applicationId "com.bodomlake.helloworld"
         minSdkVersion 16
         //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 30
@@ -55,7 +55,7 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:$retrofit2_version")
     implementation("com.squareup.retrofit2:converter-gson:$retrofit2_version")
 //    implementation("androidx.paging:paging-runtime:2.1.2")
-    implementation("androidx.paging:paging-runtime:3.1.1")
+    implementation("androidx.paging:paging-runtime:3.0.0")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     implementation("org.java-websocket:Java-WebSocket:1.5.3")
     implementation("androidx.work:work-runtime:2.5.0")
@@ -80,5 +80,8 @@ dependencies {
 //    实现百分比单位
 //    implementation("com.android.support:percent:28.0.0")
     implementation("com.google.code.gson:gson:2.8.5")
+    // 资源快速绑定的注解
+    implementation("com.jakewharton:butterknife:10.2.0")
+    annotationProcessor ("com.jakewharton:butterknife-compiler:10.2.0")
     implementation fileTree(dir: "libs", include: ["*.jar"])
 }

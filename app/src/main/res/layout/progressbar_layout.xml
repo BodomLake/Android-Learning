@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.bodomlake.helloworld.MainActivity">
 
     <!-- 系统提供的圆形进度条,依次是大中小 -->
 

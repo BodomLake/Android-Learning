@@ -1,4 +1,4 @@
-package com.ttit.helloworld;
+package com.bodomlake.helloworld;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.ttit.helloworld", appContext.getPackageName());
+        assertEquals("com.bodomlake.helloworld", appContext.getPackageName());
     }
 }

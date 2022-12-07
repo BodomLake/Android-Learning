@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:padding="5dp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.bodomlake.helloworld.MainActivity">
 
     <Button
         android:id="@+id/btn_dialog_one"

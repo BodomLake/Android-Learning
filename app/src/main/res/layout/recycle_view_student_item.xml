@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.ttit.jetpack.room.Student"></import>
+        <import type="com.bodomlake.jetpack.room.Student"></import>
         <variable
             name="student"
-            type="Student" />
+            type="com.bodomlake.jetpack.room.Student" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

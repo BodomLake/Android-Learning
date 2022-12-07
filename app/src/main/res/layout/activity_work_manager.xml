@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ttit.jetpack.workmanager.WorkManagerActivity">
+    tools:context="com.bodomlake.jetpack.workmanager.WorkManagerActivity">
 
     <Button
         android:id="@+id/button2"

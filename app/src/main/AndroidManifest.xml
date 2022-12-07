@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ttit.helloworld">
+    package="com.bodomlake.helloworld">
     <!-- 权限 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -28,12 +28,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.ttit.jetpack.workmanager.WorkManagerActivity"
+            android:name="com.bodomlake.jetpack.workmanager.WorkManagerActivity"
             android:exported="false"
             android:label="@string/title_activity_work_manager"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.ttit.jetpack.room.StudentListRoomActivity"
+            android:name="com.bodomlake.jetpack.room.StudentListRoomActivity"
             android:launchMode="singleInstance">
             <intent-filter>
 
@@ -45,7 +45,7 @@
         </activity>
         <!--
         <activity
-            android:name="com.ttit.jetpack.navigation.NavMainActivity"
+            android:name="com.bodomlake.jetpack.navigation.NavMainActivity"
             android:exported="true"
             android:label="@string/title_activity_nav"
             android:theme="@style/AppTheme.NoActionBar">
@@ -59,52 +59,52 @@
         </activity>
         -->
         <activity
-            android:name="com.ttit.jetpack.databinding.DataBindingTest"
+            android:name="com.bodomlake.jetpack.databinding.DataBindingTest"
             android:exported="false" />
         <activity
-            android:name="com.ttit.jetpack.lifecycle.LifeCycleActivity"
+            android:name="com.bodomlake.jetpack.lifecycle.LifeCycleActivity"
             android:exported="false" />
         <activity
-            android:name="com.ttit.core.drawable.DrawableActivity"
+            android:name="com.bodomlake.core.drawable.DrawableActivity"
             android:launchMode="singleInstance" />
         <activity
-            android:name="com.ttit.core.activity.SecondActivity"
+            android:name="com.bodomlake.core.activity.SecondActivity"
             android:theme="@style/Theme.AppCompat.Dialog">
             <intent-filter>
-                <action android:name="com.ttit.core.action.SecondActivity" />
+                <action android:name="com.bodomlake.core.action.SecondActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ttit.core.activity.ThirdActivity">
+        <activity android:name="com.bodomlake.core.activity.ThirdActivity">
             <intent-filter>
-                <action android:name="com.ttit.core.action.ThirdActivity" />
+                <action android:name="com.bodomlake.core.action.ThirdActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ttit.core.taskstack.Bactivity"
+            android:name="com.bodomlake.core.taskstack.Bactivity"
             android:launchMode="singleInstance" />
         <activity
-            android:name="com.ttit.core.taskstack.Cactivity"
+            android:name="com.bodomlake.core.taskstack.Cactivity"
             android:launchMode="standard" /> <!-- <activity -->
-        <!-- android:name="com.ttit.core.webview.WebViewActivity" -->
+        <!-- android:name="com.bodomlake.core.webview.WebViewActivity" -->
         <!-- android:launchMode="singleTask" /> -->
-        <activity android:name="com.ttit.core.broadcastreceiver.BActivity" /> <!-- 配置Service组件,同时配置一个action -->
-        <service android:name="com.ttit.core.service.MyService1" />
-        <service android:name="com.ttit.core.service.MyService2" />
-        <service android:name="com.ttit.jetpack.lifecycle.MyLocationService" />
+        <activity android:name="com.bodomlake.core.broadcastreceiver.BActivity" /> <!-- 配置Service组件,同时配置一个action -->
+        <service android:name="com.bodomlake.core.service.MyService1" />
+        <service android:name="com.bodomlake.core.service.MyService2" />
+        <service android:name="com.bodomlake.jetpack.lifecycle.MyLocationService" />
 
-        <receiver android:name="com.ttit.core.broadcastreceiver.StaticBRReceiver">
+        <receiver android:name="com.bodomlake.core.broadcastreceiver.StaticBRReceiver">
             <intent-filter>
                 <action android:name="com.example.broadcasttest.StaticBRReceiver" />
             </intent-filter>
         </receiver> <!-- 属性依次为：全限定类名,用于匹配的URI,是否共享数据 -->
         <!-- android:authorities 作为 NameContentProvider的命名空间 -->
         <provider
-            android:name="com.ttit.core.provider.NameContentProvider"
-            android:authorities="com.ttit.providers.myprovider"
+            android:name="com.bodomlake.core.provider.NameContentProvider"
+            android:authorities="com.bodomlake.providers.myprovider"
             android:exported="true" />
     </application>
 

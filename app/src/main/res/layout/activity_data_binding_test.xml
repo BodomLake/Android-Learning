@@ -8,7 +8,7 @@
 
         <variable
             name="idol"
-            type="com.ttit.jetpack.databinding.Idol"></variable>
+            type="com.bodomlake.jetpack.databinding.Idol"></variable>
         <!--<variable-->
         <!--    name="localImage"-->
         <!--    type="Integer" />-->
@@ -17,13 +17,13 @@
         <!--    type="String" />-->
         <variable
             name="userModelView"
-            type="com.ttit.jetpack.databinding.UserViewModel" />
+            type="com.bodomlake.jetpack.databinding.UserViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.ttit.jetpack.databinding.DataBindingTest">
+        tools:context="com.bodomlake.jetpack.databinding.DataBindingTest">
 
         <LinearLayout
             android:layout_width="match_parent"
